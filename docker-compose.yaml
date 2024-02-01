@@ -11,9 +11,7 @@ services:
       - ./:/app
     environment:
       - PORT=3000
-    #networks:
-    #  - crawler-network
-    network_mode: host
+    #network_mode: host
   web-crawler:
     build:
       dockerfile: Dockerfile-web
@@ -24,11 +22,4 @@ services:
       - ./:/app
     environment:
       - PORT=3000
-    #networks:
-    #  - crawler-network
-    network_mode: host
-  
-
-#networks:
-#  crawler-network:
-#    driver: host
+    #network_mode: host
