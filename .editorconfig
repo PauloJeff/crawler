@@ -11,3 +11,9 @@ trim_trailing_whitespace = true
 [*.md]
 max_line_length = off
 trim_trailing_whitespace = false
+
+[*.{js,css,ts}]
+indent_size = 2
+continuation_indent_size = 4
+trim_trailing_whitespace = true
+quote_type = single

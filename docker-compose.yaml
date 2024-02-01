@@ -1,0 +1,34 @@
+version: "3.4"
+
+services:
+  api-crawler:
+    build:
+      dockerfile: Dockerfile-api
+      context: ./
+    ports:
+      - 3000:3000
+    volumes:
+      - ./:/app
+    environment:
+      - PORT=3000
+    #networks:
+    #  - crawler-network
+    network_mode: host
+  web-crawler:
+    build:
+      dockerfile: Dockerfile-web
+      context: ./
+    ports:
+      - 3000:3000
+    volumes:
+      - ./:/app
+    environment:
+      - PORT=3000
+    #networks:
+    #  - crawler-network
+    network_mode: host
+  
+
+#networks:
+#  crawler-network:
+#    driver: host
